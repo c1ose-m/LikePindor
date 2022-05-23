@@ -12,13 +12,42 @@
             <ColumnDefinition Width="150*"/>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="15*"/>
             <ColumnDefinition Width="85*"/>
             <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="15*"/>
             <ColumnDefinition Width="45*"/>
             <ColumnDefinition Width="30*"/>
-            
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="450*"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
     </Grid>
 </Window>

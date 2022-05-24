@@ -80,7 +80,7 @@
             VerticalContentAlignment="Center"
             FontSize="32"
             Content="Password"/>
-        <Rectangle Fill="#FFFFC0CB"
+        <Rectangle Fill="Pink"
                    RadiusX="25"
                    Cursor="Hand"
                    RadiusY="25"

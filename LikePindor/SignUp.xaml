@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LikePindor"
         mc:Ignorable="d"
-        Title="SignUp" Height="450" Width="800">
+        WindowState="Maximized"
+        Title="SignUp" Height="1080" Width="1920">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="400*"/>
-            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="140*"/>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="40*"/>
             <ColumnDefinition Width="10*"/>
@@ -24,7 +26,8 @@
             <ColumnDefinition Width="150*"/>
             <ColumnDefinition Width="200*"/>
             <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="450*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="410*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50*"/>
@@ -49,5 +52,243 @@
             <RowDefinition Height="50*"/>
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
+        <Label Grid.Row="1"
+               Grid.Column="2" Grid.ColumnSpan="16"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               FontSize="64"
+               FontWeight="Bold"
+               FontStyle="Italic"
+               Content="CREATE ACCOUNT"/>
+        <Label
+            Grid.Row="3"
+            Grid.Column="1" Grid.ColumnSpan="12"
+            Padding="20,0,0,10"
+            VerticalContentAlignment="Center"
+            FontSize="32"
+            Content="Name"/>
+        <Rectangle Fill="LightGray"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="4"
+                   Grid.Column="1" Grid.ColumnSpan="12"/>
+        <TextBox x:Name="Name"
+                 Background="#00000000"
+                 Grid.Row="4"
+                 Grid.Column="1" Grid.ColumnSpan="12"
+                 Padding="20,0"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"/>
+
+        <Label
+            Grid.Row="6"
+            Grid.Column="1" Grid.ColumnSpan="12"
+            Padding="20,0,0,10"
+            VerticalContentAlignment="Center"
+            FontSize="32"
+            Content="Password"/>
+        <Rectangle Fill="LightGray"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="7"
+                   Grid.Column="1" Grid.ColumnSpan="12"/>
+        <TextBox x:Name="Password"
+                 Background="#00000000"
+                 Grid.Row="7"
+                 Grid.Column="1" Grid.ColumnSpan="12"
+                 Padding="20,0"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"/>
+        <Label
+            Grid.Row="9"
+            Grid.Column="1" Grid.ColumnSpan="12"
+            Padding="20,0,0,10"
+            VerticalContentAlignment="Center"
+            FontSize="32"
+            Content="Birthday"/>
+        <Rectangle Fill="LightGray"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="10"
+                   Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="Day"
+                 Background="#00000000"
+                 Grid.Row="10"
+                 Grid.Column="1" Grid.ColumnSpan="2"
+                 Padding="20,0"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Center"/>
+        <Rectangle Fill="LightGray"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="10"
+                   Grid.Column="4" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="Month"
+                 Background="#00000000"
+                 Grid.Row="10"
+                 Grid.Column="4" Grid.ColumnSpan="4"
+                 Padding="20,0"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Center"/>
+        <Rectangle Fill="LightGray"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="10"
+                   Grid.Column="9" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="Year"
+                 Background="#00000000"
+                 Grid.Row="10"
+                 Grid.Column="9" Grid.ColumnSpan="3"
+                 Padding="20,0"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Center"/>
+        <Label
+            Grid.Row="12"
+            Grid.Column="1" Grid.ColumnSpan="12"
+            Padding="20,0,0,10"
+            VerticalContentAlignment="Center"
+            FontSize="32"
+            Content="Sex"/>
+        <Rectangle x:Name="MaleB"
+                   Fill="#00000000"
+                   Stroke="Black"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="13"
+                   Grid.Column="1" Grid.ColumnSpan="4"/>
+        <Button x:Name="Male"
+                Click="Male_Click"
+                   Cursor="Hand"
+                 Background="#00000000"
+                 Grid.Row="13"
+                 Grid.Column="1" Grid.ColumnSpan="4"
+                 Padding="20,0"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                     Content="Male"/>
+        <Rectangle x:Name="FemaleB"
+            Fill="#00000000"
+                   Stroke="Black"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="13"
+                   Grid.Column="7" Grid.ColumnSpan="4"/>
+        <Button x:Name="Female"
+                   Cursor="Hand"
+                Click="Female_Click"
+                Background="#00000000"
+                Grid.Row="13"
+                Grid.Column="7" Grid.ColumnSpan="4"
+                Padding="20,0"
+                FontSize="32"
+                VerticalContentAlignment="Center"
+                Content="Female"/>
+        <Label
+            Grid.Row="15"
+            Grid.Column="1" Grid.ColumnSpan="12"
+            Padding="20,0,0,10"
+            VerticalContentAlignment="Center"
+            FontSize="32"
+            Content="Interest"/>
+        <Rectangle x:Name="LikeMaleB"
+                   Fill="#00000000"
+                   Stroke="Black"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="16"
+                   Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="LikeMale"
+                   Cursor="Hand"
+                Click="LikeMale_Click"
+                 Background="#00000000"
+                 Grid.Row="16"
+                 Grid.Column="1" Grid.ColumnSpan="2"
+                 Padding="20,0"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                Content="Male"/>
+        <Rectangle x:Name="LikeFemaleB"
+                   Fill="#00000000"
+                   Stroke="Black"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="16"
+                   Grid.Column="4" Grid.ColumnSpan="4"/>
+        <Button x:Name="LikeFemale"
+                   Cursor="Hand"
+                Click="LikeFemale_Click"
+                 Background="#00000000"
+                 Grid.Row="16"
+                 Grid.Column="4" Grid.ColumnSpan="4"
+                 Padding="20,0"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                Content="Female"/>
+        <Rectangle x:Name="LikeAllB"
+                   Fill="#00000000"
+                   Stroke="Black"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="16"
+                   Grid.Column="9" Grid.ColumnSpan="3"/>
+        <Button x:Name="LikeAll"
+                   Cursor="Hand"
+                Click="LikeAll_Click"
+                Background="#00000000"
+                 Grid.Row="16"
+                 Grid.Column="9" Grid.ColumnSpan="3"
+                 Padding="20,0"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"
+                Content="All"/>
+        <Label
+            Grid.Row="3"
+            Grid.Column="14" Grid.ColumnSpan="3"
+            Padding="20,0,0,10"
+            VerticalContentAlignment="Center"
+            FontSize="32"
+            Content="Profile photo"/>
+        <Rectangle Fill="LightGray"
+                   RadiusX="25"
+                   RadiusY="25"
+                   Cursor="Hand"
+                   Grid.Row="4" Grid.RowSpan="14"
+                   Grid.Column="14" Grid.ColumnSpan="3"/>
+        <Button x:Name="Photo"
+                 Background="#00000000"
+                 Grid.Row="4" Grid.RowSpan="14"
+                Grid.Column="14" Grid.ColumnSpan="3"
+                 Padding="20,0"
+                   Cursor="Hand"
+                 FontSize="32"
+                 VerticalContentAlignment="Center"/>
+        <Rectangle Fill="#FFFFC0CB"
+                   RadiusX="25"
+                   Cursor="Hand"
+                   RadiusY="25"
+                Grid.Row="19"
+                Grid.Column="10" Grid.ColumnSpan="5"/>
+        <Button x:Name="Continue"
+                Click="Continue_Click"
+                Background="#00000000"
+                Cursor="Hand"
+                Grid.Row="19"
+                Grid.Column="10" Grid.ColumnSpan="5"
+                FontSize="32"
+                FontWeight="Bold"                
+                Content="CONTINUE"/>
     </Grid>
 </Window>

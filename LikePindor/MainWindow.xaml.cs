@@ -31,7 +31,9 @@ namespace LikePindor
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-
+            SignUp signUp = new SignUp();
+            signUp.Show();
+            Close();
         }
     }
 }

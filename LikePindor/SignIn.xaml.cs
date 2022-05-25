@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.IO;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -37,13 +38,20 @@ namespace LikePindor
                 toImport.Add(tmp);
             }
             list = toImport;
-            List<List<string>> np = new List<List<string>>();
             foreach (List<string> item in list)
-                np.Add(new List<string> { item[0], item[1] });
-            if (np.Contains(new List<string> { UserName.Text, Password.Text }))
-                MessageBox.Show("Лешаgей");
-            else
-                MessageBox.Show("Лешаnеgей");
+                if (item[0] == UserName.Text & item[1] == Password.Text)
+                {
+                    View view = new View();
+                    string path = $@"{Directory.GetCurrentDirectory()}\current.txt";
+                    string export = string.Join(separator.ToString(), item);
+                    using (StreamWriter users = new StreamWriter(path))
+                    {
+                        users.Write(export);
+                    }
+                    view.Show();
+                    Close();
+                    break;
+                }
         }
     }
 }

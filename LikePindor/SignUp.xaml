@@ -261,13 +261,14 @@
             VerticalContentAlignment="Center"
             FontSize="32"
             Content="Profile photo"/>
-        <Rectangle Fill="LightGray"
+        <Rectangle x:Name="Field"
                    RadiusX="25"
                    RadiusY="25"
                    Cursor="Hand"
                    Grid.Row="4" Grid.RowSpan="14"
-                   Grid.Column="14" Grid.ColumnSpan="3"/>
+                   Grid.Column="14" Grid.ColumnSpan="3" Fill="LightGray"/>
         <Button x:Name="Photo"
+                Click="Photo_Click"
                  Background="#00000000"
                  Grid.Row="4" Grid.RowSpan="14"
                 Grid.Column="14" Grid.ColumnSpan="3"

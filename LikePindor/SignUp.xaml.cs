@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace LikePindor
     {
         public static char separator = '⁂';
         public static char separatorRow = '⸘';
+        public string photo = "";
         SolidColorBrush lightCyan = new SolidColorBrush(Colors.LightCyan);
         SolidColorBrush pink = new SolidColorBrush(Colors.Pink);
         SolidColorBrush lightGray = new SolidColorBrush(Colors.LightGray);
@@ -47,6 +49,7 @@ namespace LikePindor
             string date = $"{Day.Text}.{Month.Text}.{Year.Text}";
             string sex = "";
             string interest = "";
+            string savePhoto = photo;
             if (MaleB.Fill == lightCyan)
                 sex = "Male";
             else if (FemaleB.Fill == pink)
@@ -57,10 +60,13 @@ namespace LikePindor
                 interest = "Female";
             else if (LikeAllB.Fill == uk)
                 interest = "All";
-            list.Add(new List<string> { name, password, date, sex, interest });
+            list.Add(new List<string> { name, password, date, sex, interest, savePhoto });
             foreach (List<string> item in list)
                 export += string.Join(separator.ToString(), item) + separatorRow;
             Files.Users(export);
+            View view = new View();
+            view.Show();
+            Close();
         }
 
         private void Male_Click(object sender, RoutedEventArgs e)
@@ -94,6 +100,19 @@ namespace LikePindor
             LikeMaleB.Fill = lightGray;
             LikeFemaleB.Fill = lightGray;
             LikeAllB.Fill = uk;
+        }
+
+        private void Photo_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Filter = "Image files (*.BMP, *.JPG, *.GIF, *.TIF, *.PNG, *.ICO, *.EMF, *.WMF)|*.bmp;*.jpg;*.gif; *.tif; *.png; *.ico; *.emf; *.wmf";
+            if (openDialog.ShowDialog() == true)
+            {
+                photo = openDialog.FileName;
+                Field.Fill = new ImageBrush{
+                    ImageSource = new BitmapImage(new Uri(openDialog.FileName))
+                };
+            }
         }
     }
 }

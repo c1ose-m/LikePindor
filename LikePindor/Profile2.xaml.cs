@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace LikePindor
 {
-    public partial class Profile : Window
+    public partial class Profile2 : Window
     {
-        public Profile()
+        public Profile2()
         {
             InitializeComponent();
         }
@@ -25,12 +25,12 @@ namespace LikePindor
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             string import = "";
-            string path = $@"{Directory.GetCurrentDirectory()}\current.txt";
+            string path = $@"{Directory.GetCurrentDirectory()}\profile.txt";
             try
             {
-                using (StreamReader authors = new StreamReader(path))
+                using (StreamReader profile = new StreamReader(path))
                 {
-                    import = authors.ReadToEnd();
+                    import = profile.ReadToEnd();
                 }
             }
             catch (Exception) { }

@@ -86,28 +86,30 @@
                FontWeight="Bold"
                FontStyle="Italic"
                Content="DO YOU LIKE WHAT YOU SEE?"/>
-        <TextBox Grid.Row="5"
+        <TextBox x:Name="Name"
+            Grid.Row="5"
+                 Cursor="Hand"
                Grid.Column="7" Grid.ColumnSpan="2"
                  Focusable="False"
-               HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
-               FontSize="40"
+               FontSize="48"
                FontWeight="Bold"
                FontStyle="Italic"
+                 Padding="20,0,0,0"
             BorderBrush="Black"
             BorderThickness="0,0,0,5"/>
-        <Button x:Name="Name"
-            Grid.Row="5"
-               Grid.Column="7" Grid.ColumnSpan="2"/>
+        <Button x:Name="NameButton"
+                Click="NameButton_Click"
+                Grid.Row="5"
+                Grid.Column="7" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="Status"
-            Grid.Row="6"
-               Grid.Column="7" Grid.ColumnSpan="2"
-               FontSize="40"
-                Padding="25 0 0 0"
-               FontWeight="Bold"
-               FontStyle="Italic"/>
-        <Rectangle
-            Fill="HotPink"
+                   Grid.Row="6"
+                   Grid.Column="7" Grid.ColumnSpan="2"
+                   FontSize="64"
+                   Padding="25 0 0 0"
+                   FontWeight="Bold"
+                   FontStyle="Italic"/>
+        <Rectangle Fill="HotPink"
                    RadiusX="500"
                    RadiusY="500"
                    Cursor="Hand"
@@ -115,15 +117,14 @@
                    Grid.Column="3"/>
         <Button x:Name="Dislike"
                 Click="Dislike_Click"
-            Foreground="Black"
-            FontWeight="Bold"
-                   Cursor="Hand"
-                   Grid.Row="8"
-                   Grid.Column="3"
-            FontSize="72"
-            Content="×"/>
-        <Rectangle
-            Fill="LightGreen"
+                Foreground="Black"
+                FontWeight="Bold"
+                Cursor="Hand"
+                Grid.Row="8"
+                Grid.Column="3"
+                FontSize="72"
+                Content="×"/>
+        <Rectangle Fill="LightGreen"
                    RadiusX="500"
                    RadiusY="500"
                    Cursor="Hand"

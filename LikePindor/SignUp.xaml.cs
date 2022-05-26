@@ -11,6 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.IO;
 using System.Windows.Shapes;
 
 namespace LikePindor
@@ -65,6 +66,12 @@ namespace LikePindor
                 export += string.Join(separator.ToString(), item) + separatorRow;
             Files.Users(export);
             View view = new View();
+            string path = $@"{Directory.GetCurrentDirectory()}\current.txt";
+            string exportC = string.Join(separator.ToString(), list[list.Count - 1]);
+            using (StreamWriter current = new StreamWriter(path))
+            {
+                current.Write(exportC);
+            }
             view.Show();
             Close();
         }

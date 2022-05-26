@@ -44,9 +44,9 @@ namespace LikePindor
                     View view = new View();
                     string path = $@"{Directory.GetCurrentDirectory()}\current.txt";
                     string export = string.Join(separator.ToString(), item);
-                    using (StreamWriter users = new StreamWriter(path))
+                    using (StreamWriter current = new StreamWriter(path))
                     {
-                        users.Write(export);
+                        current.Write(export);
                     }
                     view.Show();
                     Close();

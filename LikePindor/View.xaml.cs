@@ -43,8 +43,8 @@ namespace LikePindor
             Random random = new Random();
             n = random.Next(0, list.Count);
             DateTime userDate = DateTime.Parse(list[n][2]);
-            Name.Text = $"{list[n][0]}, {DateTime.Now.Year - userDate.Year}";
-            Status.Text = $"Sex: {list[n][3]}\nInterest: {list[n][4]}";
+            Name.Content = $"{list[n][0]}, {DateTime.Now.Year - userDate.Year}";
+            Status.Content = $"Sex: {list[n][3]}\nInterest: {list[n][4]}";
             try
             {
                 Field.Fill = new ImageBrush
@@ -91,8 +91,8 @@ namespace LikePindor
             Random random = new Random();
             n = random.Next(0, list.Count);
             DateTime userDate = DateTime.Parse(list[n][2]);
-            Name.Text = $"{list[n][0]}, {DateTime.Now.Year - userDate.Year}";
-            Status.Text = $"Sex: {list[n][3]}\nInterest: {list[n][4]}";
+            Name.Content = $"{list[n][0]}, {DateTime.Now.Year - userDate.Year}";
+            Status.Content = $"Sex: {list[n][3]}\nInterest: {list[n][4]}";
             try
             {
                 Field.Fill = new ImageBrush
@@ -125,8 +125,8 @@ namespace LikePindor
             Random random = new Random();
             n = random.Next(0, list.Count);
             DateTime userDate = DateTime.Parse(list[n][2]);
-            Name.Text = $"{list[n][0]}, {DateTime.Now.Year - userDate.Year}";
-            Status.Text = $"Sex: {list[n][3]}\nInterest: {list[n][4]}";
+            Name.Content = $"{list[n][0]}, {DateTime.Now.Year - userDate.Year}";
+            Status.Content = $"Sex: {list[n][3]}\nInterest: {list[n][4]}";
             try
             {
                 Field.Fill = new ImageBrush

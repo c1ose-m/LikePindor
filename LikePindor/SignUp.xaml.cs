@@ -1,18 +1,11 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.IO;
-using System.Windows.Shapes;
 
 namespace LikePindor
 {
@@ -21,16 +14,15 @@ namespace LikePindor
         public static char separator = '⁂';
         public static char separatorRow = '⸘';
         public string photo = "";
-        SolidColorBrush lightCyan = new SolidColorBrush(Colors.LightCyan);
-        SolidColorBrush pink = new SolidColorBrush(Colors.Pink);
-        SolidColorBrush lightGray = new SolidColorBrush(Colors.LightGray);
-        LinearGradientBrush uk = new LinearGradientBrush(Colors.Blue, Colors.Yellow, 90);
+        SolidColorBrush blue = new SolidColorBrush(Color.FromArgb(64, 6, 38, 111));
+        SolidColorBrush yellow = new SolidColorBrush(Color.FromArgb(64, 255, 208, 115));
+        SolidColorBrush transparent = new SolidColorBrush(Colors.Transparent);
+        LinearGradientBrush by = new LinearGradientBrush(Color.FromArgb(64, 6, 38, 111), Color.FromArgb(64, 255, 208, 115), 90);
         public static List<List<string>> list = new List<List<string>>();
         public SignUp()
         {
             InitializeComponent();
         }
-
         private void Continue_Click(object sender, RoutedEventArgs e)
         {
             Files.Users(out string import);
@@ -51,15 +43,15 @@ namespace LikePindor
             string sex = "";
             string interest = "";
             string savePhoto = photo;
-            if (MaleB.Fill == lightCyan)
+            if (MaleB.Fill == blue)
                 sex = "Male";
-            else if (FemaleB.Fill == pink)
+            else if (FemaleB.Fill == yellow)
                 sex = "Female";
-            if (LikeMaleB.Fill == lightCyan)
+            if (LikeMaleB.Fill == blue)
                 interest = "Male";
-            else if (LikeFemaleB.Fill == pink)
+            else if (LikeFemaleB.Fill == yellow)
                 interest = "Female";
-            else if (LikeAllB.Fill == uk)
+            else if (LikeAllB.Fill == by)
                 interest = "All";
             list.Add(new List<string> { name, password, date, sex, interest, savePhoto });
             foreach (List<string> item in list)
@@ -75,40 +67,34 @@ namespace LikePindor
             view.Show();
             Close();
         }
-
         private void Male_Click(object sender, RoutedEventArgs e)
         {
-            MaleB.Fill = lightCyan;
-            FemaleB.Fill = lightGray;
+            MaleB.Fill = blue;
+            FemaleB.Fill = transparent;
         }
-
         private void Female_Click(object sender, RoutedEventArgs e)
         {
-            MaleB.Fill = lightGray;
-            FemaleB.Fill = pink;
+            MaleB.Fill = transparent;
+            FemaleB.Fill = yellow;
         }
-
         private void LikeMale_Click(object sender, RoutedEventArgs e)
         {
-            LikeMaleB.Fill = lightCyan;
-            LikeFemaleB.Fill = lightGray;
-            LikeAllB.Fill = lightGray;
+            LikeMaleB.Fill = blue;
+            LikeFemaleB.Fill = transparent;
+            LikeAllB.Fill = transparent;
         }
-
         private void LikeFemale_Click(object sender, RoutedEventArgs e)
         {
-            LikeMaleB.Fill = lightGray;
-            LikeFemaleB.Fill = pink;
-            LikeAllB.Fill = lightGray;
+            LikeMaleB.Fill = transparent;
+            LikeFemaleB.Fill = yellow;
+            LikeAllB.Fill = transparent;
         }
-
         private void LikeAll_Click(object sender, RoutedEventArgs e)
         {
-            LikeMaleB.Fill = lightGray;
-            LikeFemaleB.Fill = lightGray;
-            LikeAllB.Fill = uk;
+            LikeMaleB.Fill = transparent;
+            LikeFemaleB.Fill = transparent;
+            LikeAllB.Fill = by;
         }
-
         private void Photo_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openDialog = new OpenFileDialog();
@@ -116,7 +102,8 @@ namespace LikePindor
             if (openDialog.ShowDialog() == true)
             {
                 photo = openDialog.FileName;
-                Field.Fill = new ImageBrush{
+                Field.Fill = new ImageBrush
+                {
                     ImageSource = new BitmapImage(new Uri(openDialog.FileName))
                 };
             }

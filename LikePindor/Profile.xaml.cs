@@ -38,8 +38,8 @@ namespace LikePindor
             List<string> toImport = import.Split(separator).ToList();
             toImport.Remove("");
             DateTime userDate = DateTime.Parse(toImport[2]);
-            User.Text = $"{toImport[0]}, {DateTime.Now.Year - userDate.Year}";
-            Status.Text = $"Sex: {toImport[3]}\nInterest: {toImport[4]}";
+            User.Content = $"{toImport[0]}, {DateTime.Now.Year - userDate.Year}";
+            Status.Content = $"Sex: {toImport[3]}\nInterest: {toImport[4]}";
             try
             {
                 Photo.Fill = new ImageBrush
@@ -63,7 +63,7 @@ namespace LikePindor
             foreach (string item in likesImport)
                 if (item == toImport[0])
                     likesCount++;
-            Likes.Text = $"Likes: {likesCount}";
+            Likes.Content = $"Likes: {likesCount}";
             string importD = "";
             string pathD = $@"{Directory.GetCurrentDirectory()}\dislikes.txt";
             try
@@ -79,7 +79,7 @@ namespace LikePindor
             foreach (string item in dislikesImport)
                 if (item == toImport[0])
                     dislikesCount++;
-            Dislikes.Text = $"Dislikes: {dislikesCount}";
+            Dislikes.Content = $"Dislikes: {dislikesCount}";
         }
 
         private void SignOut_Click(object sender, RoutedEventArgs e)

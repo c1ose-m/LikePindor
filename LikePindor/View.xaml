@@ -1,143 +1,151 @@
-﻿<Window x:Class="LikePindor.View"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LikePindor"
-        mc:Ignorable="d"
-        Loaded="Window_Loaded"
-        WindowState="Maximized"
-        Title="View" Height="1080" Width="1920">
+﻿<Window
+    x:Class="LikePindor.View"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:LikePindor"
+    mc:Ignorable="d"
+    Loaded="Window_Loaded"
+    WindowState="Maximized"
+    Title="View"
+    Height="1080"
+    Width="1920">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="360*"/>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="60*"/>
-            <ColumnDefinition Width="150*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="150*"/>
-            <ColumnDefinition Width="110*"/>
-            <ColumnDefinition Width="550*"/>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="300*"/>
-            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition
+                Width="360*"/>
+            <ColumnDefinition
+                Width="50*"/>
+            <ColumnDefinition
+                Width="60*"/>
+            <ColumnDefinition
+                Width="150*"/>
+            <ColumnDefinition
+                Width="80*"/>
+            <ColumnDefinition
+                Width="150*"/>
+            <ColumnDefinition
+                Width="110*"/>
+            <ColumnDefinition
+                Width="550*"/>
+            <ColumnDefinition
+                Width="50*"/>
+            <ColumnDefinition
+                Width="40*"/>
+            <ColumnDefinition
+                Width="300*"/>
+            <ColumnDefinition
+                Width="20*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="70*"/>
-            <RowDefinition Height="320*"/>
-            <RowDefinition Height="225*"/>
-            <RowDefinition Height="150*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="130*"/>
+            <RowDefinition
+                Height="50*"/>
+            <RowDefinition
+                Height="50*"/>
+            <RowDefinition
+                Height="10*"/>
+            <RowDefinition
+                Height="40*"/>
+            <RowDefinition
+                Height="10*"/>
+            <RowDefinition
+                Height="100*"/>
+            <RowDefinition
+                Height="290*"/>
+            <RowDefinition
+                Height="225*"/>
+            <RowDefinition
+                Height="150*"/>
+            <RowDefinition
+                Height="25*"/>
+            <RowDefinition
+                Height="130*"/>
         </Grid.RowDefinitions>
-        <Rectangle x:Name="Field"
-                   RadiusX="25"
-                   RadiusY="25"
-                   Grid.Row="5" Grid.RowSpan="5"
-                   Grid.Column="1" Grid.ColumnSpan="6" Fill="LightGray"/>
-        <Rectangle Fill="#FFFFC0CB"
-                   RadiusX="25"
-                   RadiusY="25"
-                   Cursor="Hand"
-                   Grid.Row="1"
-                   Grid.Column="10"/>
-        <Button x:Name="Profile"
-                Click="Profile_Click"
-                   Cursor="Hand"
-                Background="#00000000"
-                Grid.Row="1"
-                Grid.Column="10"
-                FontStyle="Italic"
-                FontSize="32"
-                FontWeight="Bold"                
-                Content="PROFILE"/>
-        <Rectangle Fill="#FFFFC0CB"
-                   RadiusX="25"
-                   RadiusY="25"
-                   Cursor="Hand"
-                   Grid.Row="3"
-                   Grid.RowSpan="2"
-                   Grid.Column="10"
-                   />
-                    
-        <Button x:Name="SignOut"
-                Click="SignOut_Click"
-                FontStyle="Italic"
-                   Cursor="Hand"
-                Background="#00000000"
-                Grid.Row="3"
-                Grid.Column="10"
-                FontSize="32"
-                FontWeight="Bold"                
-                Content="SIGN OUT"/>
-
-        <Label Grid.Row="1"
-               Grid.RowSpan="4"
-               Grid.Column="2" Grid.ColumnSpan="6"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               FontSize="64"
-               FontWeight="Bold"
-               FontStyle="Italic"
-               Content="DO YOU LIKE WHAT YOU SEE?"/>
-        <TextBox x:Name="Name"
-            Grid.Row="5"
-                 Cursor="Hand"
-               Grid.Column="7" Grid.ColumnSpan="2"
-                 Focusable="False"
-               VerticalContentAlignment="Center"
-               FontSize="48"
-               FontWeight="Bold"
-               FontStyle="Italic"
-                 Padding="20,0,0,0"
-            BorderBrush="Black"
+        <Rectangle
+            x:Name="Field"
+            Grid.Row="5" Grid.RowSpan="5"
+            Grid.Column="1" Grid.ColumnSpan="6"
+            Style="{StaticResource EBig_Fill}"/>
+        <Rectangle
+            Grid.Row="1"
+            Grid.Column="10"
+            Style="{StaticResource ELit_Fill}"/>
+        <Button
+            x:Name="Profile"
+            Click="Profile_Click"
+            Grid.Row="1"
+            Grid.Column="10"
+            FontSize="32"
+            Content="PROFILE"/>
+        <Rectangle
+            Grid.Row="3" Grid.RowSpan="2"
+            Grid.Column="10"
+            Style="{StaticResource ELit_Fill}"/>
+        <Button
+            x:Name="SignOut"
+            Click="SignOut_Click"
+            Grid.Row="3" Grid.RowSpan="2"
+            Grid.Column="10"
+            FontSize="32"
+            Content="SIGN OUT"/>
+        <Label
+            Grid.Row="1" Grid.RowSpan="3"
+            Grid.Column="2" Grid.ColumnSpan="6"
+            Content="DO YOU LIKE WHAT YOU SEE?"
+            Style="{StaticResource Label_Main}"/>
+        <Border
+            Grid.Row="1" Grid.RowSpan="3"
+            Grid.Column="2" Grid.ColumnSpan="6"
+            BorderBrush="#FFFFD073"
             BorderThickness="0,0,0,5"/>
-        <Button x:Name="NameButton"
-                Click="NameButton_Click"
-                Grid.Row="5"
-                Grid.Column="7" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="Status"
-                   Grid.Row="6"
-                   Grid.Column="7" Grid.ColumnSpan="2"
-                   FontSize="64"
-                   Padding="25 0 0 0"
-                   FontWeight="Bold"
-                   FontStyle="Italic"/>
-        <Rectangle Fill="HotPink"
-                   RadiusX="500"
-                   RadiusY="500"
-                   Cursor="Hand"
-                   Grid.Row="8"
-                   Grid.Column="3"/>
-        <Button x:Name="Dislike"
-                Click="Dislike_Click"
-                Foreground="Black"
-                FontWeight="Bold"
-                Cursor="Hand"
-                Grid.Row="8"
-                Grid.Column="3"
-                FontSize="72"
-                Content="×"/>
-        <Rectangle Fill="LightGreen"
-                   RadiusX="500"
-                   RadiusY="500"
-                   Cursor="Hand"
-                   Grid.Row="8"
-                   Grid.Column="5"/>
-        <Button x:Name="Like"
-                Click="Like_Click"
-            Foreground="Red"
-            FontWeight="Bold"
-                   Cursor="Hand"
-                   Grid.Row="8"
-                   Grid.Column="5"
-            FontSize="72"
+        <Label
+            x:Name="Name"
+            Grid.Row="5"
+            Grid.Column="7" Grid.ColumnSpan="2"
+            Margin="20,0,0,0"
+            Padding="0"
+            BorderBrush="#FFFFD073"
+            FontSize="64"
+            BorderThickness="0,0,0,5"
+            Style="{StaticResource Label_Sub}"/>
+        <Button
+            x:Name="NameButton"
+            Click="NameButton_Click"
+            Grid.Row="5"
+            Grid.Column="7" Grid.ColumnSpan="2"/>
+        <Label
+            x:Name="Status"
+            Grid.Row="6"
+            Grid.Column="7" Grid.ColumnSpan="2"
+            FontSize="64"
+            Padding="20,0,0,0"
+            Style="{StaticResource Label_Sub}"/>
+        <Rectangle
+            Fill="#F006266F"
+            Grid.Row="8"
+            Grid.Column="3"
+            Style="{StaticResource Circle}"/>
+        <Button
+            x:Name="Dislike"
+            Foreground="#FFFFD073"
+            Click="Dislike_Click"
+            Grid.Row="8"
+            Grid.Column="3"
+            FontSize="64"
+            Content="×"/>
+        <Rectangle
+            Fill="#F0FFD073"
+            Grid.Row="8"
+            Grid.Column="5"
+            Style="{StaticResource Circle}"/>
+        <Button
+            x:Name="Like"
+            Click="Like_Click"
+            Foreground="#FF06266F"
+            Grid.Row="8"
+            Grid.Column="5"
+            FontSize="64"
             Content="♥"/>
     </Grid>
 </Window>

@@ -35,5 +35,12 @@ namespace LikePindor
             signUp.Show();
             Close();
         }
+
+        private void Status_Click(object sender, RoutedEventArgs e)
+        {
+            Status status = new Status();
+            status.Show();
+            Close();
+        }
     }
 }

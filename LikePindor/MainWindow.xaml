@@ -37,7 +37,11 @@
             <RowDefinition
                 Height="150*"/>
             <RowDefinition
-                Height="330*"/>
+                Height="50*"/>
+            <RowDefinition
+                Height="150*"/>
+            <RowDefinition
+                Height="130*"/>
         </Grid.RowDefinitions>
         <Label
             Grid.Row="1"
@@ -71,5 +75,16 @@
             Grid.Column="2"
             FontSize="64"
             Content="SIGN UP"/>
+        <Rectangle
+            Grid.Row="7"
+            Grid.Column="2"
+            Style="{StaticResource EBig_Fill}"/>
+        <Button
+            x:Name="Status"
+            Click="Status_Click"
+            Grid.Row="7"
+            Grid.Column="2"
+            FontSize="64"
+            Content="STATUS"/>
     </Grid>
 </Window>
